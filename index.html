@@ -4,101 +4,136 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fundamental Nursing Prometric Simulation Test</title>
-  
-  <!-- Social Media Meta Tags -->
+
+  <!-- Social sharing metadata -->
   <meta property="og:title" content="Fundamental Nursing Prometric Simulation Test" />
-  <meta property="og:description" content="SMLE-based materials — Prepare yourself for the official Prometric exam. Click to begin your simulation." />
+  <meta property="og:description" content="The essential actual Prometric simulation test with rationale and learning essence. Prepared by Giyono Asfarrasyid, ETK Yogyakarta." />
   <meta property="og:image" content="https://gyoutrain-lab.github.io/nursing-prometric-test-fundamental/icon2.jpg" />
-  <meta property="og:url" content="https://gyoutrain-lab.github.io/nursing-prometric-test-fundamental/" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#b91c1c" />
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     body {
-      background: url('icon2.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: url('icon2.jpg') no-repeat center center/cover;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
+      flex-direction: column;
       color: white;
-      backdrop-filter: brightness(0.9);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+      background-attachment: fixed;
       overflow: hidden;
     }
 
     .overlay {
+      background-color: rgba(0, 0, 0, 0.45);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .content {
+      z-index: 1;
+      text-align: center;
+      padding: 25px 30px;
       background: rgba(0, 0, 0, 0.45);
-      padding: 40px;
-      border-radius: 16px;
-      max-width: 600px;
-      width: 90%;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 1.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
-      font-size: 1.8em;
-      font-weight: 700;
-      margin-bottom: 12px;
+      font-size: 2rem;
+      margin-bottom: 0.6rem;
     }
 
-    h2 {
-      font-size: 1em;
-      font-weight: 400;
-      margin-bottom: 20px;
-      opacity: 0.9;
+    h3 {
+      font-size: 1.1rem;
+      font-weight: normal;
+      margin-bottom: 1rem;
     }
 
     p {
-      font-size: 0.95em;
-      line-height: 1.5em;
-      margin-bottom: 25px;
-      opacity: 0.9;
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+      color: #f5f5f5;
     }
 
-    a.button {
+    .credit {
+      color: #f87171;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+
+    .button {
       display: inline-block;
-      background-color: #0078ff;
+      background-color: #dc2626;
       color: white;
       text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1em;
-      transition: background-color 0.3s ease;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      transition: 0.3s;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
-    a.button:hover {
-      background-color: #005fcc;
+    .button:hover {
+      background-color: #b91c1c;
+      transform: scale(1.08);
     }
 
-    .footer {
-      margin-top: 25px;
-      font-size: 0.9em;
-      color: #ff4a4a;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.4em;
-      }
-      p {
-        font-size: 0.9em;
-      }
-      .overlay {
-        padding: 25px;
-      }
+    footer {
+      position: absolute;
+      bottom: 12px;
+      text-align: center;
+      width: 100%;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
     }
   </style>
 </head>
+
 <body>
-  <div class="overlay">
+  <div class="overlay"></div>
+
+  <div class="content">
     <h1>Fundamental Nursing Prometric Simulation Test</h1>
-    <h2>SMLE-based materials — cli
+    <h3>SMLE materials-based</h3>
+    <p>The essential actual Prometric simulation test with rationale and learning essence.</p>
+    <div class="credit">Prepared by: Giyono Asfarrasyid, ETK Yogyakarta</div>
+    <a href="https://script.google.com/macros/s/AKfycbwieo2pHSJMHq1eLXhplN0T-q868h-3FjYrDAH4lp58SeYoBhWmFtuVxRo1Wtj7tNKj/exec" 
+       class="button" id="startButton">Start Test</a>
+  </div>
+
+  <footer>© 2025 Fundamental Nursing Simulation — All Rights Reserved</footer>
+
+  <audio id="clickSound" src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3"></audio>
+
+  <script>
+    const startButton = document.getElementById('startButton');
+    const clickSound = document.getElementById('clickSound');
+    startButton.addEventListener('click', () => {
+      clickSound.play();
+    });
+  </script>
+</body>
+</html>
