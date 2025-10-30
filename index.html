@@ -1,83 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Critical Care & Emergency Prometric Simulation Test" />
-  <meta property="og:description" content="SMLE-based materials — Train yourself better to achieve your higher career with better solutions." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/gyoutrain-lab/nursing-prometric-test/main/icon3.jpg" />
-  <meta property="og:type" content="website" />
-  <title>Critical Care & Emergency Prometric Simulation Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamental Nursing Prometric Simulation Test</title>
+  <meta name="description" content="Fundamental Nursing Prometric Simulation Test — SMLE-based materials. Prepared by Giyono Asfarrasyid, ETK Yogyakarta.">
+
+  <!-- Open Graph / WhatsApp / Facebook Preview -->
+  <meta property="og:title" content="Fundamental Nursing Prometric Simulation Test">
+  <meta property="og:description" content="SMLE-based materials · Prepared by Giyono Asfarrasyid, ETK Yogyakarta">
+  <meta property="og:image" content="https://gyoutrain-lab.github.io/nursing-prometric-test-fundamental/icon2.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gyoutrain-lab.github.io/nursing-prometric-test-fundamental/">
+
+  <!-- Twitter Card (optional) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fundamental Nursing Prometric Simulation Test">
+  <meta name="twitter:description" content="SMLE-based materials · Prepared by Giyono Asfarrasyid, ETK Yogyakarta">
+  <meta name="twitter:image" content="https://gyoutrain-lab.github.io/nursing-prometric-test-fundamental/icon2.jpg">
+
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      height: 100vh;
+    }
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: "Segoe UI", sans-serif;
       overflow: hidden;
+      background-color: #000;
+    }
+    .cover {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('icon2.jpg') center center / cover no-repeat;
       display: flex;
       justify-content: center;
-      align-items: center;
-      background-color: #000;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      color: white;
-    }
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('icon3.jpg') no-repeat center center/cover;
-      z-index: -1;
-      filter: brightness(0.75);
+      align-items: flex-end;
     }
     .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
+    }
+    .title-box {
+      position: relative;
       text-align: center;
-      background: rgba(0, 0, 0, 0.3);
-      padding: 40px;
-      border-radius: 20px;
-      max-width: 90%;
+      padding-bottom: 40px;
+      z-index: 2;
     }
-    .start-button {
-      background-color: #ff4c4c;
-      border: none;
-      padding: 16px 34px;
-      font-size: 1.1rem;
+    .title-box h1 {
+      color: white;
+      font-size: 2rem;
+      font-weight: 700;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.5);
+    }
+    .title-box p {
+      margin-top: 10px;
+      color: #ff3333;
       font-weight: bold;
-      color: #fff;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s;
-      margin-bottom: 20px;
-    }
-    .start-button:hover {
-      background-color: #ff2e2e;
-      transform: scale(1.05);
-    }
-    .description {
       font-size: 1rem;
-      color: #f1f1f1;
-      line-height: 1.6;
-      text-shadow: 1px 1px 3px #000;
-    }
-    .highlight {
-      color: #ff4444;
-      font-weight: 600;
     }
   </style>
 </head>
-<body>
-  <div class="background"></div>
 
-  <div class="overlay">
-    <button class="start-button" onclick="window.location.href='https://script.google.com/macros/s/AKfycbzvNcCpfK7_8l88uk994WAAcjIqaZuDcRiFdWzlkURwK6KwxJGMLDWTHVL0hoNpv-JMng/exec'">
-      Start the Test
-    </button>
-    <div class="description">
-      <strong>Critical Care & Emergency Prometric Simulation Test</strong>, 
-      SMLE-based materials, Train yourself better to achieve your higher career with better solutions, 
-      <span class="highlight">Prepared by Giyono Asfarrasyid, ETK Yogyakarta</span>
+<body>
+  <div class="cover" onclick="redirectNow()">
+    <div class="overlay"></div>
+    <div class="title-box">
+      <h1>Fundamental Nursing Prometric Simulation Test<br><small>SMLE-based materials</small></h1>
+      <p>Prepared by Giyono Asfarrasyid, ETK Yogyakarta</p>
     </div>
   </div>
+
+  <script>
+    // Redirect to the Google Apps Script after delay or click
+    const redirectUrl = "https://script.google.com/macros/s/AKfycbwieo2pHSJMHq1eLXhplN0T-q868h-3FjYrDAH4lp58SeYoBhWmFtuVxRo1Wtj7tNKj/exec";
+
+    function redirectNow() {
+      window.location.href = redirectUrl;
+    }
+
+    // Auto redirect after 5 seconds
+    setTimeout(redirectNow, 5000);
+  </script>
 </body>
 </html>
